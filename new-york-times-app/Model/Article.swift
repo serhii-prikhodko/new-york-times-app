@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+struct Article: Codable {
+    var title: String?
+    var url: String?
+    var abstract: String?
+}
+
+struct ArticleList: Codable {
+    var results: [Article]
+}

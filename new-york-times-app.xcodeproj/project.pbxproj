@@ -14,6 +14,7 @@
 		1A163DE62432870F008EED5C /* new_york_times_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A163DE42432870F008EED5C /* new_york_times_app.xcdatamodeld */; };
 		1A163DE824328711008EED5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A163DE724328711008EED5C /* Assets.xcassets */; };
 		1A163DEB24328711008EED5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A163DE924328711008EED5C /* LaunchScreen.storyboard */; };
+		1A163DF824328C47008EED5C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A163DF724328C47008EED5C /* Article.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1A163DE724328711008EED5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A163DEA24328711008EED5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A163DEC24328711008EED5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A163DF724328C47008EED5C /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,57 @@
 		1A163DDA2432870F008EED5C /* new-york-times-app */ = {
 			isa = PBXGroup;
 			children = (
+				1A163DF624328BE8008EED5C /* Views */,
+				1A163DF524328BC1008EED5C /* Controllers */,
+				1A163DF424328BA0008EED5C /* Network */,
+				1A163DF324328B8B008EED5C /* Model */,
+				1A163DF224328A9B008EED5C /* Storyboards */,
 				1A163DDB2432870F008EED5C /* AppDelegate.swift */,
 				1A163DDD2432870F008EED5C /* SceneDelegate.swift */,
 				1A163DDF2432870F008EED5C /* ViewController.swift */,
-				1A163DE12432870F008EED5C /* Main.storyboard */,
 				1A163DE724328711008EED5C /* Assets.xcassets */,
 				1A163DE924328711008EED5C /* LaunchScreen.storyboard */,
 				1A163DEC24328711008EED5C /* Info.plist */,
 				1A163DE42432870F008EED5C /* new_york_times_app.xcdatamodeld */,
 			);
 			path = "new-york-times-app";
+			sourceTree = "<group>";
+		};
+		1A163DF224328A9B008EED5C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1A163DE12432870F008EED5C /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1A163DF324328B8B008EED5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A163DF724328C47008EED5C /* Article.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A163DF424328BA0008EED5C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1A163DF524328BC1008EED5C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1A163DF624328BE8008EED5C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +188,7 @@
 				1A163DDC2432870F008EED5C /* AppDelegate.swift in Sources */,
 				1A163DE62432870F008EED5C /* new_york_times_app.xcdatamodeld in Sources */,
 				1A163DDE2432870F008EED5C /* SceneDelegate.swift in Sources */,
+				1A163DF824328C47008EED5C /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
