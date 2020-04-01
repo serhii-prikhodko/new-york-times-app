@@ -12,6 +12,7 @@ struct Article: Codable {
     var title: String?
     var url: String?
     var abstract: String?
+    var media: [Media]?
 }
 
 struct ArticleList: Codable {
