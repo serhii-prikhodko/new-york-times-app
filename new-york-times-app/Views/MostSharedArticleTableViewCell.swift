@@ -1,25 +1,22 @@
 //
-//  ArticleTableViewCell.swift
+//  MostSharedArticleTableViewCell.swift
 //  new-york-times-app
 //
-//  Created by Serhiy Prikhodko on 4/1/20.
+//  Created by Serhiy Prikhodko on 4/2/20.
 //  Copyright © 2020 Serhiy Prikhodko. All rights reserved.
 //
 
 import UIKit
 
-class ArticleTableViewCell: UITableViewCell {
-    
+class MostSharedArticleTableViewCell: UITableViewCell {
+
     //MARK: - Properties
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var shortDescriptionLabel: UILabel!
     @IBOutlet weak var uiImageView: UIImageView!
-    weak var tabBarVC: TabBarController!
-    var cellArticle: Article?
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        //self.tabBarVC = self.tabBarController as? TabBarController
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,15 +25,11 @@ class ArticleTableViewCell: UITableViewCell {
     
     // MARK: - Functions
     @IBAction func favoritesButtonPressed(_ sender: Any) {
-        if let article = self.cellArticle {
-            self.tabBarVC.articles.append(article)
-        }
     }
     
     func update(with article: Article?) {
         self.uiImageView.image = UIImage(named: "no_image_placeholder")
         if let artcile = article {
-            self.cellArticle = article
             self.titleLabel.text = artcile.title
             self.shortDescriptionLabel.text = artcile.abstract
             NetworkService.fetchArticleImage(article: artcile, completionHandler: {(data: Data?) in
@@ -48,4 +41,5 @@ class ArticleTableViewCell: UITableViewCell {
             })
         }
     }
+
 }

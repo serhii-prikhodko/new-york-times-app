@@ -1,15 +1,15 @@
 //
-//  MostViewedTableViewController.swift
+//  MostSharedArticlesTableViewController.swift
 //  new-york-times-app
 //
-//  Created by Serhiy Prikhodko on 3/31/20.
+//  Created by Serhiy Prikhodko on 4/2/20.
 //  Copyright © 2020 Serhiy Prikhodko. All rights reserved.
 //
 
 import UIKit
 
-class MostViewedArticlesTableViewController: UITableViewController {
-    
+class MostSharedArticlesTableViewController: UITableViewController {
+
     //MARK: - Properties
     var articles = [Article]()
     
@@ -21,7 +21,7 @@ class MostViewedArticlesTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tabBarController?.navigationItem.title  = "Most viewed articles"
+        self.tabBarController?.navigationItem.title  = "Most shared articles"
     }
 
     // MARK: - Table view data source
@@ -37,7 +37,7 @@ class MostViewedArticlesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "articleCellId", for: indexPath) as! ArticleTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mostSharedCellId", for: indexPath) as! MostSharedArticleTableViewCell
         cell.update(with: self.articles[indexPath.row])
 
         return cell
@@ -52,9 +52,8 @@ class MostViewedArticlesTableViewController: UITableViewController {
         self.navigationController?.pushViewController(newViewController, animated: true)
     }
     // MARK: - Functions
-    
     func loadArticles() {
-        NetworkService.fetchArticles(mostPopularParam: MostPopularParam.viewed) { (articles: ArticleList?, error: Error?) in
+        NetworkService.fetchArticles(mostPopularParam: MostPopularParam.shared) { (articles: ArticleList?, error: Error?) in
             if let articles = articles {
                 DispatchQueue.main.async {
                     self.articles = articles.results
@@ -73,4 +72,5 @@ class MostViewedArticlesTableViewController: UITableViewController {
         alertController.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(alertController, animated: true, completion: nil)
     }
+
 }

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Alamofire
 
-enum MostParameter {
+enum MostPopularParam {
     case emailed, shared, viewed
 }
 
@@ -19,8 +19,8 @@ class NetworkService {
     static var API_KEY = "WNd68fzGSGINN4dldANxWvQ3fiL3X5YY"
     static var PERIOD = "30"
     
-    static func fetchArticles(completion: @escaping (ArticleList?, Error?)-> Void) {
-        let tempURL = URL(string: "https://api.nytimes.com/svc/mostpopular/v2/\(MostParameter.viewed)/\(PERIOD).json")!
+    static func fetchArticles(mostPopularParam: MostPopularParam, completion: @escaping (ArticleList?, Error?)-> Void) {
+        let tempURL = URL(string: "https://api.nytimes.com/svc/mostpopular/v2/\(mostPopularParam)/\(PERIOD).json")!
         let query: [String: String] = [
             "api-key": self.API_KEY
         ]
