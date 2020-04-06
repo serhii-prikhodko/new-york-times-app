@@ -8,24 +8,20 @@
 
 import UIKit
 
-class MostViewedArticlesTableViewController: UITableViewController {
+class ArticlesTableViewController: UITableViewController {
     
     //MARK: - Properties
     var articles = [Article]()
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    var mostPopularParam = MostPopularParam.viewed
     
     //MARK: - Life circle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadArticles()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.tabBarController?.navigationItem.title  = "Most viewed articles"
+        self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
@@ -52,13 +48,25 @@ class MostViewedArticlesTableViewController: UITableViewController {
         self.navigationController?.pushViewController(newViewController, animated: true)
     }
     // MARK: - Functions
+    @objc func refresh(sender:AnyObject) {
+        self.loadArticles(mostPopularParam: self.mostPopularParam)
+
+        self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
+    }
     
-    func loadArticles() {
-        NetworkService.fetchArticles(mostPopularParam: MostPopularParam.viewed) { (articles: ArticleList?, error: Error?) in
+    func prepareActivityIndicator() {
+        self.activityIndicatorView.hidesWhenStopped = true
+        self.activityIndicatorView.startAnimating()
+    }
+    
+    func loadArticles(mostPopularParam: MostPopularParam) {
+        self.prepareActivityIndicator()
+        NetworkService.fetchArticles(mostPopularParam: mostPopularParam) { (articles: ArticleList?, error: Error?) in
             if let articles = articles {
                 DispatchQueue.main.async {
                     self.articles = articles.results
-                    //self.activityIndicatorView.stopAnimating()
+                    self.activityIndicatorView?.stopAnimating()
                     self.tableView.reloadData()
                 }
             } else {
