@@ -45,6 +45,7 @@
 		1A384BEF243A4B270019A469 /* most_shared_tab_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "most_shared_tab_icon@3x.png"; sourceTree = "<group>"; };
 		1A384BF0243A4B270019A469 /* most_viewed_tab_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "most_viewed_tab_icon@3x.png"; sourceTree = "<group>"; };
 		1A384BF4243A924B0019A469 /* most_emailed_tab_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "most_emailed_tab_icon@3x.png"; sourceTree = "<group>"; };
+		1A384BF6243AFF650019A469 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "new-york-times-app/README.md"; sourceTree = SOURCE_ROOT; };
 		1A3955992433C5EA001A3EE4 /* ArticlesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewController.swift; sourceTree = "<group>"; };
 		1A39559D2433CADD001A3EE4 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		1A39559F2433CFCA001A3EE4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -139,6 +140,7 @@
 				1A3955992433C5EA001A3EE4 /* ArticlesTableViewController.swift */,
 				1A91FF052435369E006A34F3 /* WebPageViewController.swift */,
 				1A41A9612437147500D06275 /* TabBarController.swift */,
+				1A384BF6243AFF650019A469 /* README.md */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
