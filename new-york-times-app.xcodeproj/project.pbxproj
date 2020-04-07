@@ -23,11 +23,12 @@
 		1A39559A2433C5EA001A3EE4 /* ArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3955992433C5EA001A3EE4 /* ArticlesTableViewController.swift */; };
 		1A39559E2433CADD001A3EE4 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A39559D2433CADD001A3EE4 /* Media.swift */; };
 		1A3955A02433CFCA001A3EE4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A39559F2433CFCA001A3EE4 /* NetworkService.swift */; };
-		1A41A96024370C3500D06275 /* add_to_favorites.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A41A95F24370C3500D06275 /* add_to_favorites.png */; };
 		1A41A9622437147500D06275 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41A9612437147500D06275 /* TabBarController.swift */; };
 		1A91FF0424352AA0006A34F3 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A91FF0324352AA0006A34F3 /* ArticleTableViewCell.swift */; };
 		1A91FF062435369E006A34F3 /* WebPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A91FF052435369E006A34F3 /* WebPageViewController.swift */; };
 		1A91FF0A243538D6006A34F3 /* no_image_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A91FF09243538D5006A34F3 /* no_image_placeholder.png */; };
+		1AB199F3243CDBA2002004D2 /* fav_icon_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB199F2243CDBA1002004D2 /* fav_icon_empty@2x.png */; };
+		1AB199F5243CDBA9002004D2 /* fav_icon_filled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB199F4243CDBA9002004D2 /* fav_icon_filled@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,11 +50,12 @@
 		1A3955992433C5EA001A3EE4 /* ArticlesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewController.swift; sourceTree = "<group>"; };
 		1A39559D2433CADD001A3EE4 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		1A39559F2433CFCA001A3EE4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		1A41A95F24370C3500D06275 /* add_to_favorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_to_favorites.png; sourceTree = "<group>"; };
 		1A41A9612437147500D06275 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1A91FF0324352AA0006A34F3 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		1A91FF052435369E006A34F3 /* WebPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewController.swift; sourceTree = "<group>"; };
 		1A91FF09243538D5006A34F3 /* no_image_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_image_placeholder.png; sourceTree = "<group>"; };
+		1AB199F2243CDBA1002004D2 /* fav_icon_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fav_icon_empty@2x.png"; sourceTree = "<group>"; };
+		1AB199F4243CDBA9002004D2 /* fav_icon_filled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fav_icon_filled@2x.png"; sourceTree = "<group>"; };
 		31B6BF339BD521D38DE83D8E /* Pods-new-york-times-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-new-york-times-app.debug.xcconfig"; path = "Target Support Files/Pods-new-york-times-app/Pods-new-york-times-app.debug.xcconfig"; sourceTree = "<group>"; };
 		77CD2F63B182772E1833CCE0 /* Pods_new_york_times_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_new_york_times_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF43230A9331A5653C4C1DD /* Pods-new-york-times-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-new-york-times-app.release.xcconfig"; path = "Target Support Files/Pods-new-york-times-app/Pods-new-york-times-app.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,8 +162,9 @@
 				1A384BEE243A4B270019A469 /* favorite_tab_icon@3x.png */,
 				1A384BEF243A4B270019A469 /* most_shared_tab_icon@3x.png */,
 				1A384BF0243A4B270019A469 /* most_viewed_tab_icon@3x.png */,
+				1AB199F2243CDBA1002004D2 /* fav_icon_empty@2x.png */,
+				1AB199F4243CDBA9002004D2 /* fav_icon_filled@2x.png */,
 				1A384BF4243A924B0019A469 /* most_emailed_tab_icon@3x.png */,
-				1A41A95F24370C3500D06275 /* add_to_favorites.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -244,13 +247,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A91FF0A243538D6006A34F3 /* no_image_placeholder.png in Resources */,
+				1AB199F5243CDBA9002004D2 /* fav_icon_filled@2x.png in Resources */,
 				1A384BF2243A4B270019A469 /* most_shared_tab_icon@3x.png in Resources */,
 				1A384BF5243A924B0019A469 /* most_emailed_tab_icon@3x.png in Resources */,
+				1AB199F3243CDBA2002004D2 /* fav_icon_empty@2x.png in Resources */,
 				1A163DEB24328711008EED5C /* LaunchScreen.storyboard in Resources */,
 				1A384BF1243A4B270019A469 /* favorite_tab_icon@3x.png in Resources */,
 				1A163DE824328711008EED5C /* Assets.xcassets in Resources */,
 				1A384BF3243A4B270019A469 /* most_viewed_tab_icon@3x.png in Resources */,
-				1A41A96024370C3500D06275 /* add_to_favorites.png in Resources */,
 				1A163DE32432870F008EED5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

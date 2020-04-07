@@ -14,8 +14,10 @@ class ArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var shortDescriptionLabel: UILabel!
     @IBOutlet weak var uiImageView: UIImageView!
+    //@IBOutlet weak var addToFavoriteButton: UIButton!
     weak var tabBarVC: TabBarController!
     var article: Article?
+    var buttonHandler:(()-> Void)!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +28,9 @@ class ArticleTableViewCell: UITableViewCell {
     }
     
     // MARK: - Functions
+    @IBAction func favButtonClicked(_ sender: Any) {
+        self.buttonHandler()
+    }
     func update(with article: Article?) {
         self.uiImageView.image = UIImage(named: "no_image_placeholder")
         if let artcile = article {

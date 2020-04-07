@@ -35,6 +35,9 @@ class ArticlesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "articleCellId", for: indexPath) as! ArticleTableViewCell
         cell.update(with: self.articles[indexPath.row])
+        cell.buttonHandler = {()-> Void in
+            print("Fav button for acticle \(cell.article?.title) was pressed")
+        }
 
         return cell
     }
