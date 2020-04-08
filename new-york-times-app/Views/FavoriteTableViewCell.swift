@@ -1,15 +1,14 @@
 //
-//  ArticleTableViewCell.swift
+//  FavoriteTableViewCell.swift
 //  new-york-times-app
 //
-//  Created by Serhiy Prikhodko on 4/1/20.
+//  Created by Serhiy Prikhodko on 4/7/20.
 //  Copyright © 2020 Serhiy Prikhodko. All rights reserved.
 //
 
 import UIKit
 
-class ArticleTableViewCell: UITableViewCell {
-    
+class FavoriteTableViewCell: UITableViewCell {
     //MARK: - Properties
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var shortDescriptionLabel: UILabel!

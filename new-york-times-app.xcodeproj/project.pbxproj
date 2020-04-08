@@ -29,6 +29,8 @@
 		1A91FF0A243538D6006A34F3 /* no_image_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A91FF09243538D5006A34F3 /* no_image_placeholder.png */; };
 		1AB199F3243CDBA2002004D2 /* fav_icon_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB199F2243CDBA1002004D2 /* fav_icon_empty@2x.png */; };
 		1AB199F5243CDBA9002004D2 /* fav_icon_filled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB199F4243CDBA9002004D2 /* fav_icon_filled@2x.png */; };
+		1AB199F7243D0EF4002004D2 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB199F6243D0EF4002004D2 /* FavoritesTableViewController.swift */; };
+		1AB199F9243D12C7002004D2 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB199F8243D12C7002004D2 /* FavoriteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		1A91FF09243538D5006A34F3 /* no_image_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_image_placeholder.png; sourceTree = "<group>"; };
 		1AB199F2243CDBA1002004D2 /* fav_icon_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fav_icon_empty@2x.png"; sourceTree = "<group>"; };
 		1AB199F4243CDBA9002004D2 /* fav_icon_filled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fav_icon_filled@2x.png"; sourceTree = "<group>"; };
+		1AB199F6243D0EF4002004D2 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		1AB199F8243D12C7002004D2 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		31B6BF339BD521D38DE83D8E /* Pods-new-york-times-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-new-york-times-app.debug.xcconfig"; path = "Target Support Files/Pods-new-york-times-app/Pods-new-york-times-app.debug.xcconfig"; sourceTree = "<group>"; };
 		77CD2F63B182772E1833CCE0 /* Pods_new_york_times_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_new_york_times_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF43230A9331A5653C4C1DD /* Pods-new-york-times-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-new-york-times-app.release.xcconfig"; path = "Target Support Files/Pods-new-york-times-app/Pods-new-york-times-app.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				1A3955992433C5EA001A3EE4 /* ArticlesTableViewController.swift */,
+				1AB199F6243D0EF4002004D2 /* FavoritesTableViewController.swift */,
 				1A91FF052435369E006A34F3 /* WebPageViewController.swift */,
 				1A41A9612437147500D06275 /* TabBarController.swift */,
 				1A384BF6243AFF650019A469 /* README.md */,
@@ -151,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				1A91FF0324352AA0006A34F3 /* ArticleTableViewCell.swift */,
+				1AB199F8243D12C7002004D2 /* FavoriteTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -311,9 +317,11 @@
 				1A163DE02432870F008EED5C /* ViewController.swift in Sources */,
 				1A91FF0424352AA0006A34F3 /* ArticleTableViewCell.swift in Sources */,
 				1A41A9622437147500D06275 /* TabBarController.swift in Sources */,
+				1AB199F7243D0EF4002004D2 /* FavoritesTableViewController.swift in Sources */,
 				1A163DDC2432870F008EED5C /* AppDelegate.swift in Sources */,
 				1A3955A02433CFCA001A3EE4 /* NetworkService.swift in Sources */,
 				1A39559E2433CADD001A3EE4 /* Media.swift in Sources */,
+				1AB199F9243D12C7002004D2 /* FavoriteTableViewCell.swift in Sources */,
 				1A163DE62432870F008EED5C /* new_york_times_app.xcdatamodeld in Sources */,
 				1A39559A2433C5EA001A3EE4 /* ArticlesTableViewController.swift in Sources */,
 				1A163DDE2432870F008EED5C /* SceneDelegate.swift in Sources */,

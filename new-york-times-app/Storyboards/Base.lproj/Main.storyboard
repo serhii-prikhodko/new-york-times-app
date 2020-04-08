@@ -52,7 +52,7 @@
                                                 <constraint firstAttribute="height" constant="30" id="MOe-rq-QdT"/>
                                                 <constraint firstAttribute="width" constant="30" id="ggw-BI-Npv"/>
                                             </constraints>
-                                            <state key="normal" title="Button" image="fav_icon_empty.png"/>
+                                            <state key="normal" image="fav_icon_empty.png"/>
                                             <connections>
                                                 <action selector="favButtonClicked:" destination="LTx-go-tSe" eventType="touchUpInside" id="d3K-My-Nl7"/>
                                             </connections>
@@ -73,6 +73,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="addToFavoriteButton" destination="8LL-8t-CH4" id="4LL-fJ-YTN"/>
                                     <outlet property="shortDescriptionLabel" destination="zx1-qW-hgE" id="w4t-g3-IXX"/>
                                     <outlet property="titleLabel" destination="Ms1-E0-U0d" id="blf-a4-Vqg"/>
                                     <outlet property="uiImageView" destination="PGR-hj-f2P" id="njc-9T-5ce"/>
@@ -95,7 +96,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dh1-XY-Yrk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="504" y="90"/>
+            <point key="canvasLocation" x="523" y="90"/>
         </scene>
         <!--Web Page View Controller-->
         <scene sceneID="T1P-Vo-tcd">
@@ -161,6 +162,90 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3O-x0-SOX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-239" y="91"/>
+        </scene>
+        <!--Most viewed-->
+        <scene sceneID="HT2-tu-ida">
+            <objects>
+                <tableViewController storyboardIdentifier="favoritesController" id="ClK-7F-YmZ" customClass="FavoritesTableViewController" customModule="new_york_times_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="06P-tW-cru">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="favoriteCellId" id="MWm-CT-167" customClass="FavoriteTableViewCell" customModule="new_york_times_app" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="96.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MWm-CT-167" id="o1A-ho-QB9">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="96.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mWv-xy-Tfv">
+                                            <rect key="frame" x="8" y="8" width="80" height="80.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="IbS-gp-Qc5"/>
+                                                <constraint firstAttribute="height" priority="750" constant="80" id="tOg-wz-56G"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdX-7c-Mkf">
+                                            <rect key="frame" x="96" y="19" width="241" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIB-uv-Bfb">
+                                            <rect key="frame" x="96" y="48" width="241" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFR-tf-IVJ">
+                                            <rect key="frame" x="345" y="33.5" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="IWN-2C-BKI"/>
+                                                <constraint firstAttribute="width" constant="30" id="ZCn-oK-jDu"/>
+                                            </constraints>
+                                            <state key="normal" image="fav_icon_empty.png"/>
+                                            <connections>
+                                                <action selector="favButtonClicked:" destination="MWm-CT-167" eventType="touchUpInside" id="KDA-ry-s5k"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="LFR-tf-IVJ" firstAttribute="centerY" secondItem="o1A-ho-QB9" secondAttribute="centerY" id="7bW-lC-SzP"/>
+                                        <constraint firstItem="oIB-uv-Bfb" firstAttribute="leading" secondItem="mWv-xy-Tfv" secondAttribute="trailing" constant="8" id="98N-7a-1Td"/>
+                                        <constraint firstItem="vdX-7c-Mkf" firstAttribute="leading" secondItem="mWv-xy-Tfv" secondAttribute="trailing" constant="8" id="9Ke-mo-MVt"/>
+                                        <constraint firstItem="oIB-uv-Bfb" firstAttribute="top" secondItem="vdX-7c-Mkf" secondAttribute="bottom" constant="8" id="Lxv-x4-xIu"/>
+                                        <constraint firstItem="mWv-xy-Tfv" firstAttribute="top" secondItem="o1A-ho-QB9" secondAttribute="top" constant="8" id="MFt-Q6-E2E"/>
+                                        <constraint firstItem="LFR-tf-IVJ" firstAttribute="leading" secondItem="vdX-7c-Mkf" secondAttribute="trailing" constant="8" id="QaR-bO-n2B"/>
+                                        <constraint firstItem="LFR-tf-IVJ" firstAttribute="leading" secondItem="oIB-uv-Bfb" secondAttribute="trailing" constant="8" id="c24-4P-eJ1"/>
+                                        <constraint firstItem="vdX-7c-Mkf" firstAttribute="top" secondItem="o1A-ho-QB9" secondAttribute="topMargin" constant="8" id="kQp-er-esc"/>
+                                        <constraint firstItem="mWv-xy-Tfv" firstAttribute="leading" secondItem="o1A-ho-QB9" secondAttribute="leading" constant="8" id="mcx-2U-AJz"/>
+                                        <constraint firstItem="LFR-tf-IVJ" firstAttribute="trailing" secondItem="o1A-ho-QB9" secondAttribute="trailingMargin" id="oGO-tr-aWQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="mWv-xy-Tfv" secondAttribute="bottom" constant="8" id="qaA-4w-lcJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addToFavoriteButton" destination="LFR-tf-IVJ" id="cOA-pc-Iap"/>
+                                    <outlet property="shortDescriptionLabel" destination="oIB-uv-Bfb" id="OJM-fQ-1gE"/>
+                                    <outlet property="titleLabel" destination="vdX-7c-Mkf" id="NDx-8v-IQr"/>
+                                    <outlet property="uiImageView" destination="mWv-xy-Tfv" id="feg-xF-1bn"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ClK-7F-YmZ" id="Nk2-zH-WDD"/>
+                            <outlet property="delegate" destination="ClK-7F-YmZ" id="bh7-hB-Jfl"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Most viewed" id="VzC-Ir-XM3"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Mhf-KP-Q6w">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pdj-pR-nWO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1370" y="90"/>
         </scene>
     </scenes>
     <resources>

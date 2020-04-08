@@ -14,6 +14,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     var mostViewedVC = ArticlesTableViewController()
     var mostSharedVC = ArticlesTableViewController()
     var mostEmailedVC = ArticlesTableViewController()
+    var favoritesVC = FavoritesTableViewController()
+    var favoriteArticles = [Article]()
     
     //MARK: - Life circle
     override func viewDidLoad() {
@@ -29,14 +31,15 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         self.mostViewedVC = storyBoard.instantiateViewController(withIdentifier: "articleController") as! ArticlesTableViewController
         self.mostSharedVC = storyBoard.instantiateViewController(withIdentifier: "articleController") as! ArticlesTableViewController
         self.mostEmailedVC = storyBoard.instantiateViewController(withIdentifier: "articleController") as! ArticlesTableViewController
+        self.favoritesVC = storyBoard.instantiateViewController(withIdentifier: "favoritesController") as! FavoritesTableViewController
         
         self.mostViewedVC.tabBarItem = UITabBarItem(title: "Most Viewed", image: UIImage(named: "most_viewed_tab_icon@3x"), tag: 0)
         self.mostViewedVC.title = self.mostViewedVC.tabBarItem.title
         self.mostSharedVC.tabBarItem = UITabBarItem(title: "Most Shared", image: UIImage(named: "most_shared_tab_icon@3x"), tag: 1)
         self.mostEmailedVC.tabBarItem = UITabBarItem(title: "Most Emailed", image: UIImage(named: "most_emailed_tab_icon@3x"), tag: 2)
+        self.favoritesVC.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(named: "favorite_tab_icon@3x"), tag: 2)
         
-        
-        let viewControllerList = [self.mostViewedVC, self.mostSharedVC, self.mostEmailedVC]
+        let viewControllerList = [self.mostViewedVC, self.mostSharedVC, self.mostEmailedVC, self.favoritesVC]
         viewControllers = viewControllerList
     }
     func loadVCData() {

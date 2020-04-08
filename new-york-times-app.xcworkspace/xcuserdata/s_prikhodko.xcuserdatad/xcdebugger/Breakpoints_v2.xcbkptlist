@@ -30,8 +30,10 @@
             filePath = "new-york-times-app/Controllers/ArticlesTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88">
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "saveCoredataEntity(for:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -44,8 +46,8 @@
             filePath = "new-york-times-app/Controllers/ArticlesTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "ArticlesTableViewController"
             landmarkType = "3">
          </BreakpointContent>
